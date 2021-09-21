@@ -66,10 +66,18 @@ class NewPeepPage extends React.Component {
               type="text" 
               id="lastName" 
               name="lastName"
+              value={this.state.lastName}
               onChange={this.handleInputChange}
             />
           </div>
   
+          <div>
+            {
+              this.state.imageUrl
+              && <img className="peep-index-img" src={this.state.imageUrl} alt="" />
+            }
+          </div>
+
           <div>
             <label htmlFor="image">Upload an Image: </label>
             <Widget
